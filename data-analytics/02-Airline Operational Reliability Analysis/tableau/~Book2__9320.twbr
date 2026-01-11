@@ -1,0 +1,2247 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20253.25.1210.1815                               -->
+<workbook original-version='18.1' source-build='2025.3.1 (20253.25.1210.1815)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Show Top N Airports' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='15'>
+        <calculation class='tableau' formula='15' />
+        <range granularity='5' max='30' min='5' />
+      </column>
+    </datasource>
+    <datasource caption='time_stress_kpis_month' inline='true' name='federated.11vdhn51nv71at14q5aer12hmwdd' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='time_stress_kpis_month' name='textscan.0wjrgg11rx1lxq0zmhe6v1gejw81'>
+            <connection class='textscan' directory='C:/Users/Abdul Basit/OneDrive/Desktop/projects/02-airline-pulse/tableau' filename='time_stress_kpis_month.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0wjrgg11rx1lxq0zmhe6v1gejw81' name='time_stress_kpis_month.csv' table='[time_stress_kpis_month#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='month' ordinal='0' />
+            <column datatype='integer' name='total_flights' ordinal='1' />
+            <column datatype='integer' name='flights_with_dep_delay' ordinal='2' />
+            <column datatype='real' name='avg_dep_delay_min' ordinal='3' />
+            <column datatype='integer' name='flights_with_arr_delay' ordinal='4' />
+            <column datatype='real' name='avg_arr_delay_min' ordinal='5' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[time_stress_kpis_month.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[month]</local-name>
+            <parent-name>[time_stress_kpis_month.csv]</parent-name>
+            <remote-alias>month</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[time_stress_kpis_month.csv_231BAEFA8613459C9D8CF8C6D5006EEC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_flights</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_flights]</local-name>
+            <parent-name>[time_stress_kpis_month.csv]</parent-name>
+            <remote-alias>total_flights</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[time_stress_kpis_month.csv_231BAEFA8613459C9D8CF8C6D5006EEC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>flights_with_dep_delay</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[flights_with_dep_delay]</local-name>
+            <parent-name>[time_stress_kpis_month.csv]</parent-name>
+            <remote-alias>flights_with_dep_delay</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[time_stress_kpis_month.csv_231BAEFA8613459C9D8CF8C6D5006EEC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_dep_delay_min</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_dep_delay_min]</local-name>
+            <parent-name>[time_stress_kpis_month.csv]</parent-name>
+            <remote-alias>avg_dep_delay_min</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[time_stress_kpis_month.csv_231BAEFA8613459C9D8CF8C6D5006EEC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>flights_with_arr_delay</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[flights_with_arr_delay]</local-name>
+            <parent-name>[time_stress_kpis_month.csv]</parent-name>
+            <remote-alias>flights_with_arr_delay</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[time_stress_kpis_month.csv_231BAEFA8613459C9D8CF8C6D5006EEC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_arr_delay_min</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_arr_delay_min]</local-name>
+            <parent-name>[time_stress_kpis_month.csv]</parent-name>
+            <remote-alias>avg_arr_delay_min</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[time_stress_kpis_month.csv_231BAEFA8613459C9D8CF8C6D5006EEC]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Month Name' datatype='string' name='[Calculation_0696841421033473]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='CASE [month]&#13;&#10;WHEN 1 THEN &quot;Jan&quot;&#13;&#10;WHEN 2 THEN &quot;Feb&quot;&#13;&#10;WHEN 3 THEN &quot;Mar&quot;&#13;&#10;WHEN 4 THEN &quot;Apr&quot;&#13;&#10;WHEN 5 THEN &quot;May&quot;&#13;&#10;WHEN 6 THEN &quot;Jun&quot;&#13;&#10;WHEN 7 THEN &quot;Jul&quot;&#13;&#10;WHEN 8 THEN &quot;Aug&quot;&#13;&#10;WHEN 9 THEN &quot;Sep&quot;&#13;&#10;WHEN 10 THEN &quot;Oct&quot;&#13;&#10;WHEN 11 THEN &quot;Nov&quot;&#13;&#10;WHEN 12 THEN &quot;Dec&quot;&#13;&#10;END' />
+      </column>
+      <column caption='time_stress_kpis_month.csv' datatype='table' name='[__tableau_internal_object_id__].[time_stress_kpis_month.csv_231BAEFA8613459C9D8CF8C6D5006EEC]' role='measure' type='quantitative' />
+      <column caption='Avg Arr Delay Min' datatype='real' name='[avg_arr_delay_min]' role='measure' type='quantitative' />
+      <column caption='Avg Dep Delay Min' datatype='real' default-format='*0' name='[avg_dep_delay_min]' role='measure' type='quantitative' />
+      <column caption='Flights With Arr Delay' datatype='integer' name='[flights_with_arr_delay]' role='measure' type='quantitative' />
+      <column caption='Flights With Dep Delay' datatype='integer' name='[flights_with_dep_delay]' role='measure' type='quantitative' />
+      <column caption='Month' datatype='integer' name='[month]' role='dimension' type='quantitative' />
+      <column caption='Total Flights' datatype='integer' name='[total_flights]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/ABDULB~1/AppData/Local/Temp/TableauTemp/#TableauTemp_03jbmjc1cgydub1ddbiie1qlu5fz.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='01/09/2026 05:37:56 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>month</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[month]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>month</remote-alias>
+              <ordinal>0</ordinal>
+              <family>time_stress_kpis_month.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_flights</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[total_flights]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_flights</remote-alias>
+              <ordinal>1</ordinal>
+              <family>time_stress_kpis_month.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>flights_with_dep_delay</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[flights_with_dep_delay]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>flights_with_dep_delay</remote-alias>
+              <ordinal>2</ordinal>
+              <family>time_stress_kpis_month.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_dep_delay_min</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_dep_delay_min]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_dep_delay_min</remote-alias>
+              <ordinal>3</ordinal>
+              <family>time_stress_kpis_month.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>flights_with_arr_delay</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[flights_with_arr_delay]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>flights_with_arr_delay</remote-alias>
+              <ordinal>4</ordinal>
+              <family>time_stress_kpis_month.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_arr_delay_min</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_arr_delay_min]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_arr_delay_min</remote-alias>
+              <ordinal>5</ordinal>
+              <family>time_stress_kpis_month.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='time_stress_kpis_month.csv' id='time_stress_kpis_month.csv_231BAEFA8613459C9D8CF8C6D5006EEC'>
+            <properties context=''>
+              <relation connection='textscan.0wjrgg11rx1lxq0zmhe6v1gejw81' name='time_stress_kpis_month.csv' table='[time_stress_kpis_month#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='integer' name='month' ordinal='0' />
+                  <column datatype='integer' name='total_flights' ordinal='1' />
+                  <column datatype='integer' name='flights_with_dep_delay' ordinal='2' />
+                  <column datatype='real' name='avg_dep_delay_min' ordinal='3' />
+                  <column datatype='integer' name='flights_with_arr_delay' ordinal='4' />
+                  <column datatype='real' name='avg_arr_delay_min' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='airport_delay_kpis' inline='true' name='federated.1ayvm3y1lk1n3t1cig3uw07u2j8n' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='airport_delay_kpis' name='textscan.1vwify61ardsz30zwf4ou1qxsq2n'>
+            <connection class='textscan' directory='C:/Users/Abdul Basit/OneDrive/Desktop/projects/02-airline-pulse/tableau' filename='airport_delay_kpis.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1vwify61ardsz30zwf4ou1qxsq2n' name='airport_delay_kpis.csv' table='[airport_delay_kpis#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='airport_code' ordinal='0' />
+            <column datatype='integer' name='dep_flights' ordinal='1' />
+            <column datatype='real' name='avg_dep_delay_min' ordinal='2' />
+            <column datatype='integer' name='arr_flights' ordinal='3' />
+            <column datatype='real' name='avg_arr_delay_min' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[airport_delay_kpis.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>airport_code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[airport_code]</local-name>
+            <parent-name>[airport_delay_kpis.csv]</parent-name>
+            <remote-alias>airport_code</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[airport_delay_kpis.csv_4E45F0BE47874E4BB7851932713EFFBF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dep_flights</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[dep_flights]</local-name>
+            <parent-name>[airport_delay_kpis.csv]</parent-name>
+            <remote-alias>dep_flights</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[airport_delay_kpis.csv_4E45F0BE47874E4BB7851932713EFFBF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_dep_delay_min</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_dep_delay_min]</local-name>
+            <parent-name>[airport_delay_kpis.csv]</parent-name>
+            <remote-alias>avg_dep_delay_min</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[airport_delay_kpis.csv_4E45F0BE47874E4BB7851932713EFFBF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>arr_flights</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[arr_flights]</local-name>
+            <parent-name>[airport_delay_kpis.csv]</parent-name>
+            <remote-alias>arr_flights</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[airport_delay_kpis.csv_4E45F0BE47874E4BB7851932713EFFBF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_arr_delay_min</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_arr_delay_min]</local-name>
+            <parent-name>[airport_delay_kpis.csv]</parent-name>
+            <remote-alias>avg_arr_delay_min</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[airport_delay_kpis.csv_4E45F0BE47874E4BB7851932713EFFBF]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='airport_delay_kpis.csv' datatype='table' name='[__tableau_internal_object_id__].[airport_delay_kpis.csv_4E45F0BE47874E4BB7851932713EFFBF]' role='measure' type='quantitative' />
+      <column caption='Airport Code' datatype='string' name='[airport_code]' role='dimension' type='nominal' />
+      <column caption='Arr Flights' datatype='integer' name='[arr_flights]' role='measure' type='quantitative' />
+      <column caption='Avg Arr Delay Min' datatype='real' name='[avg_arr_delay_min]' role='measure' type='quantitative' />
+      <column caption='Avg Dep Delay Min' datatype='real' name='[avg_dep_delay_min]' role='measure' type='quantitative' />
+      <column caption='Dep Flights' datatype='integer' name='[dep_flights]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/ABDULB~1/AppData/Local/Temp/TableauTemp/#TableauTemp_168s9p20za50ej16bx4j213ulp4w.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='01/09/2026 05:38:26 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>airport_code</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[airport_code]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>airport_code</remote-alias>
+              <ordinal>0</ordinal>
+              <family>airport_delay_kpis.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>104</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>dep_flights</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[dep_flights]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>dep_flights</remote-alias>
+              <ordinal>1</ordinal>
+              <family>airport_delay_kpis.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>75</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_dep_delay_min</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_dep_delay_min]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_dep_delay_min</remote-alias>
+              <ordinal>2</ordinal>
+              <family>airport_delay_kpis.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>99</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>arr_flights</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[arr_flights]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>arr_flights</remote-alias>
+              <ordinal>3</ordinal>
+              <family>airport_delay_kpis.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>79</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_arr_delay_min</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_arr_delay_min]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_arr_delay_min</remote-alias>
+              <ordinal>4</ordinal>
+              <family>airport_delay_kpis.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>100</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='airport_delay_kpis.csv' id='airport_delay_kpis.csv_4E45F0BE47874E4BB7851932713EFFBF'>
+            <properties context=''>
+              <relation connection='textscan.1vwify61ardsz30zwf4ou1qxsq2n' name='airport_delay_kpis.csv' table='[airport_delay_kpis#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='airport_code' ordinal='0' />
+                  <column datatype='integer' name='dep_flights' ordinal='1' />
+                  <column datatype='real' name='avg_dep_delay_min' ordinal='2' />
+                  <column datatype='integer' name='arr_flights' ordinal='3' />
+                  <column datatype='real' name='avg_arr_delay_min' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='time_stress_kpis_weekday' inline='true' name='federated.02xi5j002ett211fcxyd01ustznc' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='time_stress_kpis_weekday' name='textscan.0os1dg41lk1olm12972ey0pzuhi7'>
+            <connection class='textscan' directory='C:/Users/Abdul Basit/OneDrive/Desktop/projects/02-airline-pulse/tableau' filename='time_stress_kpis_weekday.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0os1dg41lk1olm12972ey0pzuhi7' name='time_stress_kpis_weekday.csv' table='[time_stress_kpis_weekday#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='weekday' ordinal='0' />
+            <column datatype='integer' name='total_flights' ordinal='1' />
+            <column datatype='integer' name='flights_with_dep_delay' ordinal='2' />
+            <column datatype='real' name='avg_dep_delay_min' ordinal='3' />
+            <column datatype='integer' name='flights_with_arr_delay' ordinal='4' />
+            <column datatype='real' name='avg_arr_delay_min' ordinal='5' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[time_stress_kpis_weekday.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>weekday</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[weekday]</local-name>
+            <parent-name>[time_stress_kpis_weekday.csv]</parent-name>
+            <remote-alias>weekday</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[time_stress_kpis_weekday.csv_25B261266A054CFAA9139425DFDC8FEB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_flights</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_flights]</local-name>
+            <parent-name>[time_stress_kpis_weekday.csv]</parent-name>
+            <remote-alias>total_flights</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[time_stress_kpis_weekday.csv_25B261266A054CFAA9139425DFDC8FEB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>flights_with_dep_delay</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[flights_with_dep_delay]</local-name>
+            <parent-name>[time_stress_kpis_weekday.csv]</parent-name>
+            <remote-alias>flights_with_dep_delay</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[time_stress_kpis_weekday.csv_25B261266A054CFAA9139425DFDC8FEB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_dep_delay_min</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_dep_delay_min]</local-name>
+            <parent-name>[time_stress_kpis_weekday.csv]</parent-name>
+            <remote-alias>avg_dep_delay_min</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[time_stress_kpis_weekday.csv_25B261266A054CFAA9139425DFDC8FEB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>flights_with_arr_delay</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[flights_with_arr_delay]</local-name>
+            <parent-name>[time_stress_kpis_weekday.csv]</parent-name>
+            <remote-alias>flights_with_arr_delay</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[time_stress_kpis_weekday.csv_25B261266A054CFAA9139425DFDC8FEB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_arr_delay_min</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_arr_delay_min]</local-name>
+            <parent-name>[time_stress_kpis_weekday.csv]</parent-name>
+            <remote-alias>avg_arr_delay_min</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[time_stress_kpis_weekday.csv_25B261266A054CFAA9139425DFDC8FEB]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Weekday Name' datatype='string' name='[Calculation_0696841419902976]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='CASE [weekday]&#13;&#10;WHEN 0 THEN &quot;Sunday&quot;&#13;&#10;WHEN 1 THEN &quot;Monday&quot;&#13;&#10;WHEN 2 THEN &quot;Tuesday&quot;&#13;&#10;WHEN 3 THEN &quot;Wednesday&quot;&#13;&#10;WHEN 4 THEN &quot;Thursday&quot;&#13;&#10;WHEN 5 THEN &quot;Friday&quot;&#13;&#10;WHEN 6 THEN &quot;Saturday&quot;&#13;&#10;END' />
+      </column>
+      <column caption='time_stress_kpis_weekday.csv' datatype='table' name='[__tableau_internal_object_id__].[time_stress_kpis_weekday.csv_25B261266A054CFAA9139425DFDC8FEB]' role='measure' type='quantitative' />
+      <column caption='Avg Arr Delay Min' datatype='real' default-format='*0' name='[avg_arr_delay_min]' role='measure' type='quantitative' />
+      <column caption='Avg Dep Delay Min' datatype='real' default-format='*0' name='[avg_dep_delay_min]' role='measure' type='quantitative' />
+      <column caption='Flights With Arr Delay' datatype='integer' name='[flights_with_arr_delay]' role='measure' type='quantitative' />
+      <column caption='Flights With Dep Delay' datatype='integer' name='[flights_with_dep_delay]' role='measure' type='quantitative' />
+      <column caption='Total Flights' datatype='integer' name='[total_flights]' role='measure' type='quantitative' />
+      <column caption='Weekday' datatype='integer' name='[weekday]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/ABDULB~1/AppData/Local/Temp/TableauTemp/#TableauTemp_00eisqa1sqqkvy15lzh1u03fcg2n.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='01/09/2026 05:39:51 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>weekday</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[weekday]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>weekday</remote-alias>
+              <ordinal>0</ordinal>
+              <family>time_stress_kpis_weekday.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_flights</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[total_flights]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_flights</remote-alias>
+              <ordinal>1</ordinal>
+              <family>time_stress_kpis_weekday.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>flights_with_dep_delay</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[flights_with_dep_delay]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>flights_with_dep_delay</remote-alias>
+              <ordinal>2</ordinal>
+              <family>time_stress_kpis_weekday.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_dep_delay_min</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_dep_delay_min]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_dep_delay_min</remote-alias>
+              <ordinal>3</ordinal>
+              <family>time_stress_kpis_weekday.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>flights_with_arr_delay</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[flights_with_arr_delay]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>flights_with_arr_delay</remote-alias>
+              <ordinal>4</ordinal>
+              <family>time_stress_kpis_weekday.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_arr_delay_min</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_arr_delay_min]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_arr_delay_min</remote-alias>
+              <ordinal>5</ordinal>
+              <family>time_stress_kpis_weekday.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='time_stress_kpis_weekday.csv' id='time_stress_kpis_weekday.csv_25B261266A054CFAA9139425DFDC8FEB'>
+            <properties context=''>
+              <relation connection='textscan.0os1dg41lk1olm12972ey0pzuhi7' name='time_stress_kpis_weekday.csv' table='[time_stress_kpis_weekday#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='integer' name='weekday' ordinal='0' />
+                  <column datatype='integer' name='total_flights' ordinal='1' />
+                  <column datatype='integer' name='flights_with_dep_delay' ordinal='2' />
+                  <column datatype='real' name='avg_dep_delay_min' ordinal='3' />
+                  <column datatype='integer' name='flights_with_arr_delay' ordinal='4' />
+                  <column datatype='real' name='avg_arr_delay_min' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='volume_vs_delay_kpis' inline='true' name='federated.03lifsc12nspy5184osfq023ewq9' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='volume_vs_delay_kpis' name='textscan.0w2bs7t0dqdhti164qhki1gfa86t'>
+            <connection class='textscan' directory='C:/Users/Abdul Basit/OneDrive/Desktop/projects/02-airline-pulse/tableau' filename='volume_vs_delay_kpis.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0w2bs7t0dqdhti164qhki1gfa86t' name='volume_vs_delay_kpis.csv' table='[volume_vs_delay_kpis#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='date' name='flight_date' ordinal='0' />
+            <column datatype='integer' name='total_flights' ordinal='1' />
+            <column datatype='integer' name='flights_with_dep_delay' ordinal='2' />
+            <column datatype='real' name='avg_dep_delay_min' ordinal='3' />
+            <column datatype='integer' name='flights_with_arr_delay' ordinal='4' />
+            <column datatype='real' name='avg_arr_delay_min' ordinal='5' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[volume_vs_delay_kpis.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>flight_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[flight_date]</local-name>
+            <parent-name>[volume_vs_delay_kpis.csv]</parent-name>
+            <remote-alias>flight_date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[volume_vs_delay_kpis.csv_22AC7A84659743388FB0155244225F1C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_flights</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_flights]</local-name>
+            <parent-name>[volume_vs_delay_kpis.csv]</parent-name>
+            <remote-alias>total_flights</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[volume_vs_delay_kpis.csv_22AC7A84659743388FB0155244225F1C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>flights_with_dep_delay</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[flights_with_dep_delay]</local-name>
+            <parent-name>[volume_vs_delay_kpis.csv]</parent-name>
+            <remote-alias>flights_with_dep_delay</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[volume_vs_delay_kpis.csv_22AC7A84659743388FB0155244225F1C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_dep_delay_min</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_dep_delay_min]</local-name>
+            <parent-name>[volume_vs_delay_kpis.csv]</parent-name>
+            <remote-alias>avg_dep_delay_min</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[volume_vs_delay_kpis.csv_22AC7A84659743388FB0155244225F1C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>flights_with_arr_delay</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[flights_with_arr_delay]</local-name>
+            <parent-name>[volume_vs_delay_kpis.csv]</parent-name>
+            <remote-alias>flights_with_arr_delay</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[volume_vs_delay_kpis.csv_22AC7A84659743388FB0155244225F1C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_arr_delay_min</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_arr_delay_min]</local-name>
+            <parent-name>[volume_vs_delay_kpis.csv]</parent-name>
+            <remote-alias>avg_arr_delay_min</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[volume_vs_delay_kpis.csv_22AC7A84659743388FB0155244225F1C]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='volume_vs_delay_kpis.csv' datatype='table' name='[__tableau_internal_object_id__].[volume_vs_delay_kpis.csv_22AC7A84659743388FB0155244225F1C]' role='measure' type='quantitative' />
+      <column caption='Avg Arr Delay Min' datatype='real' name='[avg_arr_delay_min]' role='measure' type='quantitative' />
+      <column caption='Avg Dep Delay Min' datatype='real' default-format='*0' name='[avg_dep_delay_min]' role='measure' type='quantitative' />
+      <column caption='Flight Date' datatype='date' name='[flight_date]' role='dimension' type='ordinal' />
+      <column caption='Flights With Arr Delay' datatype='integer' name='[flights_with_arr_delay]' role='measure' type='quantitative' />
+      <column caption='Flights With Dep Delay' datatype='integer' name='[flights_with_dep_delay]' role='measure' type='quantitative' />
+      <column caption='Total Flights' datatype='integer' name='[total_flights]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/ABDULB~1/AppData/Local/Temp/TableauTemp/#TableauTemp_1dxccor1qhuq1g16sh9p21viq98d.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='01/09/2026 06:00:25 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>flight_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[flight_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>flight_date</remote-alias>
+              <ordinal>0</ordinal>
+              <family>volume_vs_delay_kpis.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>61</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[volume_vs_delay_kpis.csv_22AC7A84659743388FB0155244225F1C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_flights</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[total_flights]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_flights</remote-alias>
+              <ordinal>1</ordinal>
+              <family>volume_vs_delay_kpis.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[volume_vs_delay_kpis.csv_22AC7A84659743388FB0155244225F1C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>flights_with_dep_delay</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[flights_with_dep_delay]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>flights_with_dep_delay</remote-alias>
+              <ordinal>2</ordinal>
+              <family>volume_vs_delay_kpis.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>15</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[volume_vs_delay_kpis.csv_22AC7A84659743388FB0155244225F1C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_dep_delay_min</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_dep_delay_min]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_dep_delay_min</remote-alias>
+              <ordinal>3</ordinal>
+              <family>volume_vs_delay_kpis.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[volume_vs_delay_kpis.csv_22AC7A84659743388FB0155244225F1C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>flights_with_arr_delay</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[flights_with_arr_delay]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>flights_with_arr_delay</remote-alias>
+              <ordinal>4</ordinal>
+              <family>volume_vs_delay_kpis.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>15</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[volume_vs_delay_kpis.csv_22AC7A84659743388FB0155244225F1C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_arr_delay_min</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_arr_delay_min]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_arr_delay_min</remote-alias>
+              <ordinal>5</ordinal>
+              <family>volume_vs_delay_kpis.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[volume_vs_delay_kpis.csv_22AC7A84659743388FB0155244225F1C]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='volume_vs_delay_kpis.csv' id='volume_vs_delay_kpis.csv_22AC7A84659743388FB0155244225F1C'>
+            <properties context=''>
+              <relation connection='textscan.0w2bs7t0dqdhti164qhki1gfa86t' name='volume_vs_delay_kpis.csv' table='[volume_vs_delay_kpis#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='date' name='flight_date' ordinal='0' />
+                  <column datatype='integer' name='total_flights' ordinal='1' />
+                  <column datatype='integer' name='flights_with_dep_delay' ordinal='2' />
+                  <column datatype='real' name='avg_dep_delay_min' ordinal='3' />
+                  <column datatype='integer' name='flights_with_arr_delay' ordinal='4' />
+                  <column datatype='real' name='avg_arr_delay_min' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='haul_reliability_kpis' inline='true' name='federated.1293xn81t7a50z183fuq90hxs9r3' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='haul_reliability_kpis' name='textscan.05s5koy1dkbnhg1arjaj90twt023'>
+            <connection class='textscan' directory='C:/Users/Abdul Basit/OneDrive/Desktop/projects/02-airline-pulse/tableau' filename='haul_reliability_kpis.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.05s5koy1dkbnhg1arjaj90twt023' name='haul_reliability_kpis.csv' table='[haul_reliability_kpis#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='haul_type' ordinal='0' />
+            <column datatype='integer' name='total_flights' ordinal='1' />
+            <column datatype='integer' name='flights_with_dep_delay' ordinal='2' />
+            <column datatype='real' name='avg_dep_delay_min' ordinal='3' />
+            <column datatype='integer' name='flights_with_arr_delay' ordinal='4' />
+            <column datatype='real' name='avg_arr_delay_min' ordinal='5' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[haul_reliability_kpis.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>haul_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[haul_type]</local-name>
+            <parent-name>[haul_reliability_kpis.csv]</parent-name>
+            <remote-alias>haul_type</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[haul_reliability_kpis.csv_0FDB63481032408DAE3CDECCAD1A677B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_flights</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_flights]</local-name>
+            <parent-name>[haul_reliability_kpis.csv]</parent-name>
+            <remote-alias>total_flights</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[haul_reliability_kpis.csv_0FDB63481032408DAE3CDECCAD1A677B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>flights_with_dep_delay</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[flights_with_dep_delay]</local-name>
+            <parent-name>[haul_reliability_kpis.csv]</parent-name>
+            <remote-alias>flights_with_dep_delay</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[haul_reliability_kpis.csv_0FDB63481032408DAE3CDECCAD1A677B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_dep_delay_min</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_dep_delay_min]</local-name>
+            <parent-name>[haul_reliability_kpis.csv]</parent-name>
+            <remote-alias>avg_dep_delay_min</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[haul_reliability_kpis.csv_0FDB63481032408DAE3CDECCAD1A677B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>flights_with_arr_delay</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[flights_with_arr_delay]</local-name>
+            <parent-name>[haul_reliability_kpis.csv]</parent-name>
+            <remote-alias>flights_with_arr_delay</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[haul_reliability_kpis.csv_0FDB63481032408DAE3CDECCAD1A677B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_arr_delay_min</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_arr_delay_min]</local-name>
+            <parent-name>[haul_reliability_kpis.csv]</parent-name>
+            <remote-alias>avg_arr_delay_min</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[haul_reliability_kpis.csv_0FDB63481032408DAE3CDECCAD1A677B]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='haul_reliability_kpis.csv' datatype='table' name='[__tableau_internal_object_id__].[haul_reliability_kpis.csv_0FDB63481032408DAE3CDECCAD1A677B]' role='measure' type='quantitative' />
+      <column caption='Avg Arr Delay Min' datatype='real' default-format='*0' name='[avg_arr_delay_min]' role='measure' type='quantitative' />
+      <column caption='Avg Dep Delay Min' datatype='real' default-format='*0' name='[avg_dep_delay_min]' role='measure' type='quantitative' />
+      <column caption='Flights With Arr Delay' datatype='integer' name='[flights_with_arr_delay]' role='measure' type='quantitative' />
+      <column caption='Flights With Dep Delay' datatype='integer' name='[flights_with_dep_delay]' role='measure' type='quantitative' />
+      <column caption='Haul Type' datatype='string' name='[haul_type]' role='dimension' type='nominal' />
+      <column caption='Total Flights' datatype='integer' name='[total_flights]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/ABDULB~1/AppData/Local/Temp/TableauTemp/#TableauTemp_1popiuz0js6aog1b8p3ky1widffk.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='01/10/2026 07:29:55 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>haul_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[haul_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>haul_type</remote-alias>
+              <ordinal>0</ordinal>
+              <family>haul_reliability_kpis.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[haul_reliability_kpis.csv_0FDB63481032408DAE3CDECCAD1A677B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_flights</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[total_flights]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_flights</remote-alias>
+              <ordinal>1</ordinal>
+              <family>haul_reliability_kpis.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[haul_reliability_kpis.csv_0FDB63481032408DAE3CDECCAD1A677B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>flights_with_dep_delay</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[flights_with_dep_delay]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>flights_with_dep_delay</remote-alias>
+              <ordinal>2</ordinal>
+              <family>haul_reliability_kpis.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[haul_reliability_kpis.csv_0FDB63481032408DAE3CDECCAD1A677B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_dep_delay_min</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_dep_delay_min]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_dep_delay_min</remote-alias>
+              <ordinal>3</ordinal>
+              <family>haul_reliability_kpis.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[haul_reliability_kpis.csv_0FDB63481032408DAE3CDECCAD1A677B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>flights_with_arr_delay</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[flights_with_arr_delay]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>flights_with_arr_delay</remote-alias>
+              <ordinal>4</ordinal>
+              <family>haul_reliability_kpis.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[haul_reliability_kpis.csv_0FDB63481032408DAE3CDECCAD1A677B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_arr_delay_min</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_arr_delay_min]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_arr_delay_min</remote-alias>
+              <ordinal>5</ordinal>
+              <family>haul_reliability_kpis.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[haul_reliability_kpis.csv_0FDB63481032408DAE3CDECCAD1A677B]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='haul_reliability_kpis.csv' id='haul_reliability_kpis.csv_0FDB63481032408DAE3CDECCAD1A677B'>
+            <properties context=''>
+              <relation connection='textscan.05s5koy1dkbnhg1arjaj90twt023' name='haul_reliability_kpis.csv' table='[haul_reliability_kpis#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='haul_type' ordinal='0' />
+                  <column datatype='integer' name='total_flights' ordinal='1' />
+                  <column datatype='integer' name='flights_with_dep_delay' ordinal='2' />
+                  <column datatype='real' name='avg_dep_delay_min' ordinal='3' />
+                  <column datatype='integer' name='flights_with_arr_delay' ordinal='4' />
+                  <column datatype='real' name='avg_arr_delay_min' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>Top Airports by Average Departure Delay</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='airport_delay_kpis' name='federated.1ayvm3y1lk1n3t1cig3uw07u2j8n' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Show Top N Airports' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='15'>
+              <calculation class='tableau' formula='15' />
+              <range granularity='5' max='30' min='5' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1ayvm3y1lk1n3t1cig3uw07u2j8n'>
+            <column caption='Airport Code' datatype='string' name='[airport_code]' role='dimension' type='nominal' />
+            <column-instance column='[avg_arr_delay_min]' derivation='Avg' name='[avg:avg_arr_delay_min:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[avg_dep_delay_min]' derivation='Avg' name='[avg:avg_dep_delay_min:qk]' pivot='key' type='quantitative' />
+            <column caption='Avg Arr Delay Min' datatype='real' name='[avg_arr_delay_min]' role='measure' type='quantitative' />
+            <column caption='Avg Dep Delay Min' datatype='real' name='[avg_dep_delay_min]' role='measure' type='quantitative' />
+            <column-instance column='[airport_code]' derivation='None' name='[none:airport_code:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ayvm3y1lk1n3t1cig3uw07u2j8n].[none:airport_code:nk]'>
+            <groupfilter count='[Parameters].[Parameter 1]' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='AVG([avg_dep_delay_min])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:airport_code:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.1ayvm3y1lk1n3t1cig3uw07u2j8n].[none:airport_code:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;ULY&quot;</bucket>
+              <bucket>&quot;BQS&quot;</bucket>
+              <bucket>&quot;LPK&quot;</bucket>
+              <bucket>&quot;CNN&quot;</bucket>
+              <bucket>&quot;UCT&quot;</bucket>
+              <bucket>&quot;NAL&quot;</bucket>
+              <bucket>&quot;SWT&quot;</bucket>
+              <bucket>&quot;CEE&quot;</bucket>
+              <bucket>&quot;CSY&quot;</bucket>
+              <bucket>&quot;KLF&quot;</bucket>
+              <bucket>&quot;BTK&quot;</bucket>
+              <bucket>&quot;PES&quot;</bucket>
+              <bucket>&quot;GDZ&quot;</bucket>
+              <bucket>&quot;IAR&quot;</bucket>
+              <bucket>&quot;OVS&quot;</bucket>
+              <bucket>&quot;VOG&quot;</bucket>
+              <bucket>&quot;MRV&quot;</bucket>
+              <bucket>&quot;KUF&quot;</bucket>
+              <bucket>&quot;PYJ&quot;</bucket>
+              <bucket>&quot;NYM&quot;</bucket>
+              <bucket>&quot;GOJ&quot;</bucket>
+              <bucket>&quot;SVX&quot;</bucket>
+              <bucket>&quot;KVX&quot;</bucket>
+              <bucket>&quot;ABA&quot;</bucket>
+              <bucket>&quot;AER&quot;</bucket>
+              <bucket>&quot;MJZ&quot;</bucket>
+              <bucket>&quot;YKS&quot;</bucket>
+              <bucket>&quot;TBW&quot;</bucket>
+              <bucket>&quot;CEK&quot;</bucket>
+              <bucket>&quot;DYR&quot;</bucket>
+              <bucket>&quot;HMA&quot;</bucket>
+              <bucket>&quot;ULV&quot;</bucket>
+              <bucket>&quot;UIK&quot;</bucket>
+              <bucket>&quot;VKO&quot;</bucket>
+              <bucket>&quot;KRR&quot;</bucket>
+              <bucket>&quot;IKT&quot;</bucket>
+              <bucket>&quot;VKT&quot;</bucket>
+              <bucket>&quot;NUX&quot;</bucket>
+              <bucket>&quot;URJ&quot;</bucket>
+              <bucket>&quot;BZK&quot;</bucket>
+              <bucket>&quot;ASF&quot;</bucket>
+              <bucket>&quot;KJA&quot;</bucket>
+              <bucket>&quot;LED&quot;</bucket>
+              <bucket>&quot;KHV&quot;</bucket>
+              <bucket>&quot;KRO&quot;</bucket>
+              <bucket>&quot;DME&quot;</bucket>
+              <bucket>&quot;OVB&quot;</bucket>
+              <bucket>&quot;EGO&quot;</bucket>
+              <bucket>&quot;SVO&quot;</bucket>
+              <bucket>&quot;KZN&quot;</bucket>
+              <bucket>&quot;JOK&quot;</bucket>
+              <bucket>&quot;AAQ&quot;</bucket>
+              <bucket>&quot;SCW&quot;</bucket>
+              <bucket>&quot;UUS&quot;</bucket>
+              <bucket>&quot;TJM&quot;</bucket>
+              <bucket>&quot;UFA&quot;</bucket>
+              <bucket>&quot;KGP&quot;</bucket>
+              <bucket>&quot;RGK&quot;</bucket>
+              <bucket>&quot;PEZ&quot;</bucket>
+              <bucket>&quot;HTA&quot;</bucket>
+              <bucket>&quot;RTW&quot;</bucket>
+              <bucket>&quot;PEE&quot;</bucket>
+              <bucket>&quot;REN&quot;</bucket>
+              <bucket>&quot;BAX&quot;</bucket>
+              <bucket>&quot;SGC&quot;</bucket>
+              <bucket>&quot;KYZ&quot;</bucket>
+              <bucket>&quot;VOZ&quot;</bucket>
+              <bucket>&quot;MQF&quot;</bucket>
+              <bucket>&quot;TOF&quot;</bucket>
+              <bucket>&quot;NOJ&quot;</bucket>
+              <bucket>&quot;VVO&quot;</bucket>
+              <bucket>&quot;IJK&quot;</bucket>
+              <bucket>&quot;ROV&quot;</bucket>
+              <bucket>&quot;STW&quot;</bucket>
+              <bucket>&quot;NJC&quot;</bucket>
+              <bucket>&quot;MMK&quot;</bucket>
+              <bucket>&quot;NSK&quot;</bucket>
+              <bucket>&quot;SKX&quot;</bucket>
+              <bucket>&quot;OMS&quot;</bucket>
+              <bucket>&quot;OGZ&quot;</bucket>
+              <bucket>&quot;URS&quot;</bucket>
+              <bucket>&quot;NOZ&quot;</bucket>
+              <bucket>&quot;ARH&quot;</bucket>
+              <bucket>&quot;ESL&quot;</bucket>
+              <bucket>&quot;KGD&quot;</bucket>
+              <bucket>&quot;KEJ&quot;</bucket>
+              <bucket>&quot;UUA&quot;</bucket>
+              <bucket>&quot;MCX&quot;</bucket>
+              <bucket>&quot;SLY&quot;</bucket>
+              <bucket>&quot;PKV&quot;</bucket>
+              <bucket>&quot;NBC&quot;</bucket>
+              <bucket>&quot;NNM&quot;</bucket>
+              <bucket>&quot;KXK&quot;</bucket>
+              <bucket>&quot;UUD&quot;</bucket>
+              <bucket>&quot;NFG&quot;</bucket>
+              <bucket>&quot;GDX&quot;</bucket>
+              <bucket>&quot;GRV&quot;</bucket>
+              <bucket>&quot;UKX&quot;</bucket>
+              <bucket>&quot;PKC&quot;</bucket>
+              <bucket>&quot;OSW&quot;</bucket>
+              <bucket>&quot;EYK&quot;</bucket>
+              <bucket>&quot;IWA&quot;</bucket>
+              <bucket>&quot;NYA&quot;</bucket>
+              <bucket>&quot;USK&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.1ayvm3y1lk1n3t1cig3uw07u2j8n].[none:airport_code:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1ayvm3y1lk1n3t1cig3uw07u2j8n].[avg:avg_dep_delay_min:qk]' scope='cols' value='Avg. Departure Delay in Minutes' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <tooltip column='[federated.1ayvm3y1lk1n3t1cig3uw07u2j8n].[avg:avg_arr_delay_min:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Airport Code:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1ayvm3y1lk1n3t1cig3uw07u2j8n].[none:airport_code:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Avg. Departure Delay Min:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1ayvm3y1lk1n3t1cig3uw07u2j8n].[avg:avg_dep_delay_min:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Avg. Arrival Delay Min:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1ayvm3y1lk1n3t1cig3uw07u2j8n].[avg:avg_arr_delay_min:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#4e79a7' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#000000' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ayvm3y1lk1n3t1cig3uw07u2j8n].[none:airport_code:nk]</rows>
+        <cols>[federated.1ayvm3y1lk1n3t1cig3uw07u2j8n].[avg:avg_dep_delay_min:qk]</cols>
+      </table>
+      <simple-id uuid='{077BFE30-B932-4E49-B27D-994719986B42}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>Monthly Avg Departure Delay</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='time_stress_kpis_month' name='federated.11vdhn51nv71at14q5aer12hmwdd' />
+          </datasources>
+          <datasource-dependencies datasource='federated.11vdhn51nv71at14q5aer12hmwdd'>
+            <column caption='Month Name' datatype='string' name='[Calculation_0696841421033473]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='CASE [month]&#13;&#10;WHEN 1 THEN &quot;Jan&quot;&#13;&#10;WHEN 2 THEN &quot;Feb&quot;&#13;&#10;WHEN 3 THEN &quot;Mar&quot;&#13;&#10;WHEN 4 THEN &quot;Apr&quot;&#13;&#10;WHEN 5 THEN &quot;May&quot;&#13;&#10;WHEN 6 THEN &quot;Jun&quot;&#13;&#10;WHEN 7 THEN &quot;Jul&quot;&#13;&#10;WHEN 8 THEN &quot;Aug&quot;&#13;&#10;WHEN 9 THEN &quot;Sep&quot;&#13;&#10;WHEN 10 THEN &quot;Oct&quot;&#13;&#10;WHEN 11 THEN &quot;Nov&quot;&#13;&#10;WHEN 12 THEN &quot;Dec&quot;&#13;&#10;END' />
+            </column>
+            <column-instance column='[avg_dep_delay_min]' derivation='Avg' name='[avg:avg_dep_delay_min:qk]' pivot='key' type='quantitative' />
+            <column caption='Avg Dep Delay Min' datatype='real' default-format='*0' name='[avg_dep_delay_min]' role='measure' type='quantitative' />
+            <column caption='Month' datatype='integer' name='[month]' role='dimension' type='quantitative' />
+            <column-instance column='[Calculation_0696841421033473]' derivation='None' name='[none:Calculation_0696841421033473:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.11vdhn51nv71at14q5aer12hmwdd].[avg:avg_dep_delay_min:qk]' scope='rows' value='Avg. Departure Delay Minutes' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#757575'>Month Name:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.11vdhn51nv71at14q5aer12hmwdd].[none:Calculation_0696841421033473:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#757575'>Avg.  Departure Delay Min:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.11vdhn51nv71at14q5aer12hmwdd].[avg:avg_dep_delay_min:qk]>]]></run>
+                <run>Æ&#10;&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#75a1c7' />
+                <format attr='size' value='2' />
+                <format attr='mark-markers-mode' value='all' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.11vdhn51nv71at14q5aer12hmwdd].[avg:avg_dep_delay_min:qk]</rows>
+        <cols>[federated.11vdhn51nv71at14q5aer12hmwdd].[none:Calculation_0696841421033473:nk]</cols>
+      </table>
+      <simple-id uuid='{16635B3C-39BD-41C1-9B95-BCBB88972C4F}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Benton Sans Book'>Weekday Avg Departure Delay</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='time_stress_kpis_weekday' name='federated.02xi5j002ett211fcxyd01ustznc' />
+          </datasources>
+          <datasource-dependencies datasource='federated.02xi5j002ett211fcxyd01ustznc'>
+            <column caption='Weekday Name' datatype='string' name='[Calculation_0696841419902976]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='CASE [weekday]&#13;&#10;WHEN 0 THEN &quot;Sunday&quot;&#13;&#10;WHEN 1 THEN &quot;Monday&quot;&#13;&#10;WHEN 2 THEN &quot;Tuesday&quot;&#13;&#10;WHEN 3 THEN &quot;Wednesday&quot;&#13;&#10;WHEN 4 THEN &quot;Thursday&quot;&#13;&#10;WHEN 5 THEN &quot;Friday&quot;&#13;&#10;WHEN 6 THEN &quot;Saturday&quot;&#13;&#10;END' />
+            </column>
+            <column-instance column='[avg_dep_delay_min]' derivation='Avg' name='[avg:avg_dep_delay_min:qk]' pivot='key' type='quantitative' />
+            <column caption='Avg Dep Delay Min' datatype='real' default-format='*0' name='[avg_dep_delay_min]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_0696841419902976]' derivation='None' name='[none:Calculation_0696841419902976:nk]' pivot='key' type='nominal' />
+            <column caption='Weekday' datatype='integer' name='[weekday]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.02xi5j002ett211fcxyd01ustznc].[none:Calculation_0696841419902976:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Monday&quot;</bucket>
+              <bucket>&quot;Tuesday&quot;</bucket>
+              <bucket>&quot;Wednesday&quot;</bucket>
+              <bucket>&quot;Thursday&quot;</bucket>
+              <bucket>&quot;Friday&quot;</bucket>
+              <bucket>&quot;Saturday&quot;</bucket>
+              <bucket>&quot;Sunday&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.02xi5j002ett211fcxyd01ustznc].[avg:avg_dep_delay_min:qk]' scope='rows' value='Avg. Deperature Delay Min' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#757575'>Weekday Name:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.02xi5j002ett211fcxyd01ustznc].[none:Calculation_0696841419902976:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#757575'>Avg.  Departure Delay Minutes:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.02xi5j002ett211fcxyd01ustznc].[avg:avg_dep_delay_min:qk]>]]></run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#75a1c7' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#000000' />
+                <format attr='size' value='1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.02xi5j002ett211fcxyd01ustznc].[avg:avg_dep_delay_min:qk]</rows>
+        <cols>[federated.02xi5j002ett211fcxyd01ustznc].[none:Calculation_0696841419902976:nk]</cols>
+      </table>
+      <simple-id uuid='{EBAAD038-DD03-42A3-BF60-261E568EADC9}' />
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Benton Sans Book'>Daily Flight Volume vs Average Departure Delay</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='volume_vs_delay_kpis' name='federated.03lifsc12nspy5184osfq023ewq9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.03lifsc12nspy5184osfq023ewq9'>
+            <column-instance column='[avg_dep_delay_min]' derivation='Avg' name='[avg:avg_dep_delay_min:qk]' pivot='key' type='quantitative' />
+            <column caption='Avg Dep Delay Min' datatype='real' default-format='*0' name='[avg_dep_delay_min]' role='measure' type='quantitative' />
+            <column caption='Flight Date' datatype='date' name='[flight_date]' role='dimension' type='ordinal' />
+            <column-instance column='[flight_date]' derivation='None' name='[none:flight_date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_flights]' derivation='Sum' name='[sum:total_flights:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Flights' datatype='integer' name='[total_flights]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.03lifsc12nspy5184osfq023ewq9].[avg:avg_dep_delay_min:qk]' included-values='non-null' />
+          <slices>
+            <column>[federated.03lifsc12nspy5184osfq023ewq9].[avg:avg_dep_delay_min:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.03lifsc12nspy5184osfq023ewq9].[sum:total_flights:qk]' field-type='quantitative' max='650' min='450' range-type='fixed' scope='cols' type='space' />
+            <format attr='title' class='0' field='[federated.03lifsc12nspy5184osfq023ewq9].[avg:avg_dep_delay_min:qk]' scope='rows' value='Avg Departure Delay Minutes' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <lod column='[federated.03lifsc12nspy5184osfq023ewq9].[none:flight_date:qk]' />
+              <tooltip column='[federated.03lifsc12nspy5184osfq023ewq9].[sum:total_flights:qk]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1' />
+                <format attr='mark-color' value='#000000' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#000000' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.03lifsc12nspy5184osfq023ewq9].[avg:avg_dep_delay_min:qk]</rows>
+        <cols>[federated.03lifsc12nspy5184osfq023ewq9].[sum:total_flights:qk]</cols>
+      </table>
+      <simple-id uuid='{A3EE1D47-3F2D-4BFC-8036-062CC2EE7A99}' />
+    </worksheet>
+    <worksheet name='Sheet 5'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Average Departure Delay by Flight Type
+</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='haul_reliability_kpis' name='federated.1293xn81t7a50z183fuq90hxs9r3' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1293xn81t7a50z183fuq90hxs9r3'>
+            <column-instance column='[avg_dep_delay_min]' derivation='Avg' name='[avg:avg_dep_delay_min:qk]' pivot='key' type='quantitative' />
+            <column caption='Avg Dep Delay Min' datatype='real' default-format='*0' name='[avg_dep_delay_min]' role='measure' type='quantitative' />
+            <column caption='Haul Type' datatype='string' name='[haul_type]' role='dimension' type='nominal' />
+            <column-instance column='[haul_type]' derivation='None' name='[none:haul_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[total_flights]' derivation='Sum' name='[sum:total_flights:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Flights' datatype='integer' name='[total_flights]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1293xn81t7a50z183fuq90hxs9r3].[none:haul_type:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1293xn81t7a50z183fuq90hxs9r3].[avg:avg_dep_delay_min:qk]' shelf='columns' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1293xn81t7a50z183fuq90hxs9r3].[avg:avg_dep_delay_min:qk]' scope='rows' value='Avg. Departure Delay Min' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1293xn81t7a50z183fuq90hxs9r3].[none:haul_type:nk]' value='166' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='height-header' value='18' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <tooltip column='[federated.1293xn81t7a50z183fuq90hxs9r3].[sum:total_flights:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#cc2222' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1293xn81t7a50z183fuq90hxs9r3].[avg:avg_dep_delay_min:qk]</rows>
+        <cols>[federated.1293xn81t7a50z183fuq90hxs9r3].[none:haul_type:nk]</cols>
+      </table>
+      <simple-id uuid='{325128F5-0F5A-4C3C-B8A2-0CDE2E390E85}' />
+    </worksheet>
+    <worksheet name='Sheet 6'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Average Arrival Delay by Flight Type
+</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='haul_reliability_kpis' name='federated.1293xn81t7a50z183fuq90hxs9r3' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1293xn81t7a50z183fuq90hxs9r3'>
+            <column-instance column='[avg_arr_delay_min]' derivation='Avg' name='[avg:avg_arr_delay_min:qk]' pivot='key' type='quantitative' />
+            <column caption='Avg Arr Delay Min' datatype='real' default-format='*0' name='[avg_arr_delay_min]' role='measure' type='quantitative' />
+            <column caption='Haul Type' datatype='string' name='[haul_type]' role='dimension' type='nominal' />
+            <column-instance column='[haul_type]' derivation='None' name='[none:haul_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[avg_arr_delay_min]' derivation='Sum' name='[sum:avg_arr_delay_min:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_flights]' derivation='Sum' name='[sum:total_flights:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Flights' datatype='integer' name='[total_flights]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1293xn81t7a50z183fuq90hxs9r3].[none:haul_type:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1293xn81t7a50z183fuq90hxs9r3].[sum:avg_arr_delay_min:qk]' shelf='columns' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1293xn81t7a50z183fuq90hxs9r3].[avg:avg_arr_delay_min:qk]' scope='rows' value='Avg. Arrival Delay Min' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1293xn81t7a50z183fuq90hxs9r3].[none:haul_type:nk]' value='137' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <tooltip column='[federated.1293xn81t7a50z183fuq90hxs9r3].[sum:total_flights:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1293xn81t7a50z183fuq90hxs9r3].[avg:avg_arr_delay_min:qk]</rows>
+        <cols>[federated.1293xn81t7a50z183fuq90hxs9r3].[none:haul_type:nk]</cols>
+      </table>
+      <simple-id uuid='{DB9B80B6-78E1-40E7-B05D-2ECCF8583071}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Airport Reliability'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Benton Sans Book'>Airport Reliability - Departure Delays</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='860' maxwidth='1650' minheight='560' minwidth='420' sizing-mode='range' />
+      <datasources>
+        <datasource name='Parameters' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Show Top N Airports' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='15'>
+          <calculation class='tableau' formula='15' />
+          <range granularity='5' max='30' min='5' />
+        </column>
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='5' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97960' id='8' param='vert' type-v2='layout-flow' w='99024' x='488' y='1020'>
+            <zone h='5612' id='9' type-v2='title' w='99024' x='488' y='1020'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='92348' id='6' type-v2='layout-basic' w='99024' x='488' y='6632' />
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='84359' id='3' name='Sheet 1' w='82712' x='672' y='13462' />
+        <zone h='15513' id='4' mode='slider' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='15516' x='83201' y='14231' />
+        <zone forceUpdate='true' h='6154' id='10' type-v2='text' w='95785' x='977' y='6923'>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book' fontsize='16'>Airports at the top experience the highest average departure delays, indicating lower operational reliability.</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Benton Sans Book'>Airport Reliability - Departure Delays</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='16' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97960' id='15' param='vert' type-v2='layout-flow' w='99024' x='488' y='1020'>
+                <zone h='5612' id='9' type-v2='title' w='99024' x='488' y='1020'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='6154' id='10' type-v2='text' w='95785' x='977' y='6923'>
+                  <formatted-text>
+                    <run fontcolor='#000000' fontname='Benton Sans Book' fontsize='16'>Airports at the top experience the highest average departure delays, indicating lower operational reliability.</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='84359' id='3' is-fixed='true' name='Sheet 1' w='82712' x='672' y='13462'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='15513' id='4' mode='slider' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='15516' x='83201' y='14231'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{2932B837-3424-4E3B-B0BF-D49DD38FFD7A}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Benton Sans Book'>Time-Based Operational Stress</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='860' maxwidth='1650' minheight='560' minwidth='420' sizing-mode='range' />
+      <zones>
+        <zone h='100000' id='5' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97960' id='8' param='vert' type-v2='layout-flow' w='99024' x='488' y='1020'>
+            <zone h='5612' id='9' type-v2='title' w='99024' x='488' y='1020'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='92348' id='6' type-v2='layout-basic' w='99024' x='488' y='6632' />
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='42219' id='3' name='Sheet 2' w='60573' x='1828' y='8291' />
+        <zone h='45536' id='4' name='Sheet 3' w='66362' x='32115' y='52679' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Benton Sans Book'>Time-Based Operational Stress</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='13' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97960' id='12' param='vert' type-v2='layout-flow' w='99024' x='488' y='1020'>
+                <zone h='5612' id='9' type-v2='title' w='99024' x='488' y='1020'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='42219' id='3' is-fixed='true' name='Sheet 2' w='60573' x='1828' y='8291'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='45536' id='4' is-fixed='true' name='Sheet 3' w='66362' x='32115' y='52679'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{5BB0B9D6-2C4F-4D14-8EAD-CA6D8CC3C9A4}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 3'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Benton Sans Book'>Flight Volume vs Operational Reliability</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='860' maxwidth='1250' minheight='560' minwidth='420' sizing-mode='range' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98002' id='7' param='vert' type-v2='layout-flow' w='98720' x='640' y='999'>
+            <zone h='5493' id='8' type-v2='title' w='98720' x='640' y='999'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='92509' id='5' type-v2='layout-basic' w='98720' x='640' y='6492' />
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='60175' id='3' name='Sheet 4' w='66160' x='18560' y='31461' />
+        <zone forceUpdate='true' h='20974' id='9' type-v2='text' w='94320' x='3040' y='8240'>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book' fontsize='14'>Daily flight volume alone does not explain delays.</run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontname='Benton Sans Book' fontsize='14'>Similar volumes show wide variability, indicating that operational execution matters more than congestion.</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Benton Sans Book'>Flight Volume vs Operational Reliability</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='13' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98002' id='12' param='vert' type-v2='layout-flow' w='98720' x='640' y='999'>
+                <zone h='5493' id='8' type-v2='title' w='98720' x='640' y='999'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='20974' id='9' type-v2='text' w='94320' x='3040' y='8240'>
+                  <formatted-text>
+                    <run fontcolor='#000000' fontname='Benton Sans Book' fontsize='14'>Daily flight volume alone does not explain delays.</run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#000000' fontname='Benton Sans Book' fontsize='14'>Similar volumes show wide variability, indicating that operational execution matters more than congestion.</run>
+                    <run>Æ&#10;</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='60175' id='3' is-fixed='true' name='Sheet 4' w='66160' x='18560' y='31461'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{3E1B43D7-4149-41E1-A760-0569E4293445}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 4'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>Short-Haul vs Long-Haul Operational Reliability</run>
+            <run fontalignment='1'>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='860' maxwidth='1550' minheight='560' minwidth='420' sizing-mode='range' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98002' id='7' param='vert' type-v2='layout-flow' w='98968' x='516' y='999'>
+            <zone h='6118' id='8' type-v2='title' w='98968' x='516' y='999'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='91884' id='5' type-v2='layout-basic' w='98968' x='516' y='7117'>
+              <zone forceUpdate='true' h='91884' id='3' type-v2='text' w='98968' x='516' y='7117'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='68165' id='9' name='Sheet 5' w='31484' x='10323' y='25218' />
+        <zone h='68664' id='10' name='Sheet 6' w='32903' x='49935' y='25094' />
+        <zone h='8240' id='11' type-v2='text' w='91613' x='4194' y='10861'>
+          <formatted-text>
+            <run fontsize='12'>Short-haul flights experience slightly higher delays than long-haul flights.</run>
+            <run>Æ&#10;</run>
+            <run fontsize='12'>The &quot;Other&quot; category has a much smaller flight count and should be interpreted with caution.</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='1' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{24BF71D3-97B7-41AD-8DAA-AA5BA91594AC}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='141'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='28'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='slider' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{22FCDD39-06C7-4FFC-805C-6DAD0AEC132D}' />
+    </window>
+    <window class='dashboard' name='Airport Reliability'>
+      <viewpoints>
+        <viewpoint name='Sheet 1'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{6F23AFB9-88C0-44BD-83C0-B45AD09919F7}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{82749C07-9C15-404F-90AA-3E1305BF886A}' />
+    </window>
+    <window class='worksheet' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{5C91167D-14C2-4AEF-8114-0B203B389BB0}' />
+    </window>
+    <window class='dashboard' name='Dashboard 2'>
+      <viewpoints>
+        <viewpoint name='Sheet 2'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 3'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{C3893C2A-1B5F-4134-A32D-EF094471AE2E}' />
+    </window>
+    <window class='worksheet' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{A9DCF8A5-09D1-4152-ABFE-DEBD8B268E30}' />
+    </window>
+    <window class='dashboard' name='Dashboard 3'>
+      <viewpoints>
+        <viewpoint name='Sheet 4'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{BCC6C40E-ED79-41E1-BE4E-3C703E523954}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8D584181-6470-4072-B4A0-91DB6541242D}' />
+    </window>
+    <window class='worksheet' name='Sheet 6'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{69E27C53-E07C-4AAC-8623-3674623CE0E9}' />
+    </window>
+    <window class='dashboard' name='Dashboard 4'>
+      <viewpoints>
+        <viewpoint name='Sheet 5'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 6'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='3' />
+      <simple-id uuid='{C86E0AFA-6415-4A59-8AA2-456337F5D378}' />
+    </window>
+  </windows>
+</workbook>
