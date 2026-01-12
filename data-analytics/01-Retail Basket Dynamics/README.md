@@ -43,22 +43,6 @@ This project was completed as a learning exercise to strengthen practical skills
 
 ---
 
-## Project Structure
-
-    notebooks/
-    ├── setup.ipynb
-    ├── data_preprocessing_and_feature_engineering.ipynb
-    └── insights_and_analysis.ipynb
-
-    data/
-    ├── online_retail_II.csv
-    ├── retail.db
-    └── retail_features.csv
-
-    README.md
-    
----
-
 ## Notebook 1 — Setup (SQL & Database)
 
 **Objective**  
@@ -174,4 +158,5 @@ Dashboard screenshots and explanations are provided in a separate Markdown file.
 This project focuses on **learning and practice** rather than production-level optimization.  
 The analysis is descriptive and exploratory in nature.
 No predictive modeling or advanced machine learning was intentionally included.
+
 
