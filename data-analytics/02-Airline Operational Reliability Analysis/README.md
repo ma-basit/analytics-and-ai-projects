@@ -1,175 +1,64 @@
-# Airline Operational Reliability Analysis
+# Airline Pulse: Operational Reliability Analysis
 
 ## Project Overview
+This project analyzes airline operational data to explore patterns in delays, reliability, and performance across airports, time periods, and flight types.
 
-This is a SQL-first analytics project focused on analyzing airline operational reliability using real-world flight operations data.
-
-The project emphasizes:
-- Data modeling with SQL
-- Operational KPI design
-- Time-based and volume-based analysis
-- Industry-style analytics workflow
-
-The dataset is provided as a production-style SQLite database, not pre-cleaned CSV files.
+The purpose of the project is to practice **SQL-based analytics and dashboard-driven insights** using a realistic airline dataset.  
+The focus is on operational behavior rather than passenger analytics.
 
 ---
 
-## Project Goals
-
-- Analyze airline delays and operational stress patterns
-- Design reusable SQL views for operational KPIs
-- Validate metrics before visualization
-- Communicate insights through Tableau dashboards
-
-The project is intentionally realistic and avoids exaggerated or predictive claims.
+## Objectives
+- Analyze delay patterns across airports and time  
+- Compare operational reliability across flight types  
+- Understand how volume and execution relate to delays  
+- Practice SQL aggregation and KPI creation  
+- Present findings using Tableau dashboards  
 
 ---
 
-## Dataset Description
+## Dataset
+- **Source:** Public Kaggle dataset (SQLite format)  
+- **Type:** Flight-level airline operations data  
 
-- Source: Airline operations database (`travel.sqlite`)
-- Format: SQLite relational database
-- Core fact table: `flights`
-- Grain: One row per flight
-
-Key fields include:
-- Scheduled and actual departure/arrival timestamps
-- Departure and arrival airports
-- Flight status
-- Aircraft code
-
-Missing actual timestamps are stored as the string `'\N'`, reflecting real operational data quality issues.
+> Raw data files are not included in this repository due to size constraints.  
+> Dataset source and structure are documented for reference.
 
 ---
 
 ## Tools Used
-
-- **SQLite** — primary data storage  
-- **SQL** — KPI logic and data modeling  
-- **Python (sqlite3)** — SQL execution only  
-- **Excel** — KPI validation and sanity checks  
-- **Tableau** — final dashboards and storytelling  
-
-No pandas transformations were used.  
-All business logic lives in SQL.
+- **SQLite** – querying and aggregation  
+- **DB Browser for SQLite** – SQL execution and exploration  
+- **Excel** – validation and basic checks  
+- **Tableau** – dashboard creation and visualization  
 
 ---
 
-## Data Modeling Approach
-
-All analytics are built on a single base SQL view.
-
-### Base Analytical View — `analytics_flights_base`
-
-**Purpose**
-- Centralize timestamp normalization
-- Handle missing values consistently
-- Compute delay metrics once
-- Preserve one row per flight
-
-**Key logic**
-- Timezone information removed for SQLite compatibility
-- Delays computed only for valid, non-cancelled flights
-- Departure and arrival delays calculated in minutes
-
-**Validation results**
-- Total flights: **33,121**
-- Flights with departure delay data: **16,765**
-- Flights with arrival delay data: **16,707**
-
-This view acts as the single source of truth for all downstream analysis.
+## Key Questions Explored
+- Which airports experience higher average delays?  
+- How do delays vary across months and weekdays?  
+- Is higher flight volume associated with worse on-time performance?  
+- Do short-haul and long-haul flights differ in reliability?  
 
 ---
 
-## KPI Views Created
+## Deliverables
+- SQL scripts for data exploration and KPI views  
+- Validated summary tables  
+- Tableau dashboards with visual explanations  
 
-### 1. Airport-Level Delay KPIs (`airport_delay_kpis`)
-**Business question**  
-Which airports experience the highest average delays?
-
-- Aggregates departure and arrival delays by airport
-- Reports average delays and flight counts
-- Identifies airport-level operational bottlenecks
+Dashboard screenshots and interpretations are documented separately in a Markdown file.
 
 ---
 
-### 2. Time-Based Operational Stress KPIs  
-(`time_stress_kpis_month`, `time_stress_kpis_weekday`)
-
-**Business question**  
-When are airline operations most stressed?
-
-- Monthly and weekday aggregations
-- Highlights seasonal and mid-week stress patterns
-- Shows that high volume periods are not always the worst-performing
+## Learning Outcomes
+- Stronger understanding of operational analytics  
+- Practical experience using SQL for real-world datasets  
+- Improved ability to interpret time-based and performance data  
+- Experience translating metrics into visual insights  
 
 ---
 
-### 3. Volume vs Delay KPIs (`volume_vs_delay_kpis`)
-**Business question**  
-Is higher flight volume associated with worse on-time performance?
-
-- Daily flight volume compared to average delays
-- Reveals weak correlation between volume and delay
-- Emphasizes the role of operational execution over congestion
-
----
-
-### 4. Short-Haul vs Long-Haul Reliability (`haul_reliability_kpis`)
-**Business question**  
-Do flight types differ in operational reliability?
-
-- Uses aircraft type as a practical proxy for haul length
-- Compares average departure and arrival delays
-- Includes explicit assumption documentation
-- Shows short-haul flights experience slightly higher delays
-
----
-
-## Excel Validation
-
-Before dashboarding, selected SQL KPI views were exported to a multi-sheet Excel workbook and validated using basic sorting and pivot checks.
-
-Excel was used strictly for:
-- Sanity-checking aggregations
-- Verifying delay calculations
-- Confirming trends observed in SQL
-
-No transformations or recalculations were performed in Excel.  
-SQL remains the single source of truth.
-
----
-
-## Tableau Dashboards
-
-The analysis is presented through multiple Tableau dashboards, each mapped to a specific business question:
-
-1. **Airport Reliability**  
-   Identifies airports with the highest average delays.
-
-2. **Time-Based Operational Stress**  
-   Shows monthly and weekday delay patterns.
-
-3. **Flight Volume vs Operational Reliability**  
-   Demonstrates that higher volume does not consistently lead to higher delays.
-
-4. **Short-Haul vs Long-Haul Reliability**  
-   Compares operational performance across flight types and confirms consistency between departure and arrival delays.
-
-Dashboards focus on clarity, minimal filters, and realistic interpretation rather than visual complexity.
-
----
-
-## Project Status
-
-- SQL data modeling: ✅ Complete  
-- KPI views: ✅ Complete  
-- Excel validation: ✅ Complete  
-- Tableau dashboards: ✅ Complete  
-
----
-
-## Key Takeaway
-
-Airline delays are driven more by **operational execution, airport constraints, and timing** than by raw flight volume alone.  
-A SQL-first approach enables consistent, transparent analysis suitable for real-world operational decision-making.
+## Notes
+This project was completed as a **learning-focused analytics exercise**.  
+The analysis is descriptive and aims to reflect realistic operational patterns without making predictive or optimization claims.
