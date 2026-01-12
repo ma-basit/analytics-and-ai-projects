@@ -1,39 +1,45 @@
-# Retail Basket Dynamics  
-**End-to-End Retail Analytics using SQL, Python, and Tableau**
+# Retail Basket Dynamics
+
+## Project Overview
+This project explores retail transaction data to understand customer purchasing behavior, product performance, and time-based sales patterns.  
+The goal of the project is to practice **end-to-end data analytics**, starting from raw data exploration to dashboard-based insights.
+
+This project was completed as a learning exercise to strengthen practical skills in SQL, Python, and Tableau.
 
 ---
 
-## Project Overview
-
-Retail Basket Dynamics is an end-to-end retail analytics project built on real transactional data.  
-The goal of the project is to understand customer behavior, product performance, basket composition, time-based sales patterns, and geographic demand using a realistic analytics workflow.
-
-The project is intentionally structured around concrete business questions rather than open-ended exploratory analysis. Each question is answered using the most appropriate tool (Python or Tableau).
+## Objectives
+- Understand customer purchasing patterns and basket composition  
+- Analyze product performance and revenue contribution  
+- Identify time-based trends in sales activity  
+- Practice feature engineering and aggregation logic  
+- Communicate insights using Tableau dashboards  
 
 ---
 
 ## Dataset
+- **Name:** Online Retail II Dataset  
+- **Source:** Public dataset (UCI / Kaggle mirror)  
+- **Type:** Transaction-level retail data  
 
-- **Source:** Online Retail II transactional dataset  
-- **Granularity:** Line-item level transactions  
-- **Time span:** December 2009 – December 2011  
-- **Scale:** ~1 million rows  
-- **Storage:** SQLite database (`retail.db`)  
-
-The dataset contains multi-item invoices, repeat customers, and international transactions, making it suitable for real-world retail analytics.
+> Raw datasets are not included in this repository due to file size constraints.  
+> Dataset source and usage details are documented for reproducibility.
 
 ---
 
-## Business Questions
+## Key Questions Explored
+- Which customers and products contribute most to revenue?  
+- How do sales vary across time (hour, weekday, month)?  
+- How does basket size differ across countries and time periods?  
+- Which products show seasonal versus stable demand?  
 
-1. Which customer segments generate the highest revenue and purchase frequency?  
-2. Which products are the strongest and weakest performers based on revenue and demand volume?  
-3. What time-based patterns affect sales (hour, weekday, month)?  
-4. Which product combinations are most frequently purchased together?  
-5. Which countries contribute the most revenue, and how does purchasing behavior differ across regions?  
-6. How does average basket size vary across time periods and countries?  
-7. Which products show strong seasonality versus stable year-round demand?  
-8. Which products act as traffic drivers rather than revenue drivers?
+---
+
+## Deliverables
+- Cleaned and feature-engineered datasets (local)  
+- SQL queries for aggregation and KPI creation  
+- Python notebooks for analysis  
+- Tableau dashboards with supporting insights  
 
 ---
 
@@ -133,75 +139,7 @@ All dashboards use `retail_features.csv`.
 
 ### Dashboard 1 — Time-Based Sales Patterns
 
-**Business Question**  
-What time-based patterns affect sales?
-
-**Visuals**
-- Monthly revenue trend (line chart)
-- Revenue by weekday (bar chart)
-- Revenue by hour of day (bar chart)
-
-**Filters**
-- Year
-- Country
-
-**Purpose**
-Shows when sales occur across different time granularities and highlights operationally important periods.
-
----
-
-### Dashboard 2 — Geographic Revenue & Customer Purchasing Patterns
-
-**Business Question**  
-Which countries contribute the most revenue, and how does purchasing behavior differ?
-
-**Visuals**
-- Revenue concentration by country (bar chart)
-- Revenue by country (map)
-- Average invoice value by country (bar chart)
-
-**Filters**
-- Year
-- Top N Countries (parameter)
-
-**Purpose**
-Separates total revenue dominance from average basket value to avoid misleading conclusions.
-
----
-
-### Dashboard 3 — Average Basket Size Patterns
-
-**Business Question**  
-How does average basket size vary across time periods and countries?
-
-**Visuals**
-- Average basket size by country (bar chart)
-- Average basket size by month (line chart)
-
-**Filters**
-- Year
-- Top N Countries (parameter)
-
-**Purpose**
-Focuses on basket composition rather than revenue, highlighting differences in purchasing behavior.
-
----
-
-### Dashboard 4 — Product-Level Seasonality Insights
-
-**Business Question**  
-Which products show strong seasonality versus stable demand?
-
-**Visuals**
-- Monthly revenue trend for Top N products (line chart)
-- Monthly revenue heatmap by product (heatmap)
-
-**Filters**
-- Year
-- Top N Products (parameter)
-
-**Purpose**
-Identifies seasonal products and stable year-round sellers using visual pattern recognition.
+Dashboard screenshots and explanations are provided in a separate Markdown file.
 
 ---
 
@@ -224,14 +162,16 @@ Identifies seasonal products and stable year-round sellers using visual pattern 
 - Jupyter Notebook
 
 ---
+## Learning Outcomes
+- Improved understanding of transactional data analysis  
+- Hands-on practice with SQL and Pandas  
+- Experience designing dashboards for business interpretation  
+- Better understanding of how analytics supports business questions  
 
-## Project Status
+---
 
-This project is complete.
-
-The focus was on:
-- Correct metrics
-- Transparent assumptions
-- Business relevant insights
-
+## Notes
+This project focuses on **learning and practice** rather than production-level optimization.  
+The analysis is descriptive and exploratory in nature.
 No predictive modeling or advanced machine learning was intentionally included.
+
