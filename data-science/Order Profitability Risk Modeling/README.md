@@ -27,24 +27,6 @@ This project aims to:
 
 ---
 
-## Project Structure
-
-project/
-│
-├── data/
-│ ├── raw/
-│ └── processed/
-│
-├── notebooks/
-│ ├── 01_data_understanding.ipynb
-│ ├── 02_eda.ipynb
-│ ├── 03_feature_engineering.ipynb
-│ └── 04_modeling.ipynb
-│
-└── README.md
-
----
-
 ## Approach
 
 ### 1. Data Understanding & Cleaning
