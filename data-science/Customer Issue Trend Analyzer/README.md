@@ -75,18 +75,17 @@ CUSTOMER-ISSUE-TREND-ANALYZER/
 │
 ├── README.md
 ├── analysis_insights.md
-│
 ├── data/
 │   ├── raw/
 │   └── processed/
-|
 ├── notebooks/
 │   ├── 01_data_understanding.ipynb
 │   ├── 02_text_preprocessing_and_vectorization.ipynb
 │   ├── 03_topic_modeling_lda.ipynb
-│   ├── 04_trend_analysis.ipynb
+│   └── 04_trend_analysis.ipynb
 │   └── 05_bert_embeddings_clustering.ipynb
-
+├── modeling_insights.md
+└── README.md
 ---
 
 ## Tools Used
